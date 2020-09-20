@@ -27,10 +27,10 @@ def CleanMenuTable(table_array):
             table_array[day][category] = re.findall('[A-Z][^A-Z]*', table_array[day][category])
 
 
+    #We remove useless spaces at the start of the end
     for day in range(len(table_array)):
         for category in range(len(table_array[day])):
             for meal in range(len(table_array[day][category])):
-                #We remove useless spaces at the start of the end
                 table_array[day][category][meal] = table_array[day][category][meal].strip()
 
     return table_array
